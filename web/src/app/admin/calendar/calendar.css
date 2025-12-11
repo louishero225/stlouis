@@ -1,0 +1,152 @@
+/* Custom styles for react-big-calendar */
+
+.rbc-calendar {
+    font-family: inherit;
+}
+
+.rbc-header {
+    padding: 12px 6px;
+    font-weight: 600;
+    border-bottom: 2px solid hsl(var(--border));
+    background: hsl(var(--muted) / 0.3);
+}
+
+.rbc-today {
+    background-color: hsl(var(--primary) / 0.1);
+}
+
+.rbc-off-range-bg {
+    background: hsl(var(--muted) / 0.5);
+}
+
+.rbc-date-cell {
+    padding: 8px;
+    text-align: right;
+}
+
+.rbc-current {
+    font-weight: bold;
+}
+
+.rbc-event {
+    padding: 4px 8px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rbc-event:hover {
+    opacity: 1 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.rbc-event-label {
+    font-size: 0.75rem;
+}
+
+.rbc-toolbar {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 16px;
+}
+
+.rbc-toolbar button {
+    padding: 8px 16px;
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.rbc-toolbar button:hover {
+    background: hsl(var(--muted));
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border-color: hsl(var(--primary));
+}
+
+.rbc-month-view,
+.rbc-time-view,
+.rbc-agenda-view {
+    border: 1px solid hsl(var(--border));
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rbc-month-row {
+    border-color: hsl(var(--border));
+}
+
+.rbc-day-bg {
+    border-color: hsl(var(--border));
+}
+
+.rbc-time-slot {
+    border-top: 1px solid hsl(var(--border));
+}
+
+.rbc-time-header-content {
+    border-left: 1px solid hsl(var(--border));
+}
+
+.rbc-time-content {
+    border-top: 2px solid hsl(var(--border));
+}
+
+.rbc-agenda-view table {
+    border: 1px solid hsl(var(--border));
+}
+
+.rbc-agenda-view table tbody > tr > td + td {
+    border-left: 1px solid hsl(var(--border));
+}
+
+.rbc-agenda-view table tbody > tr + tr {
+    border-top: 1px solid hsl(var(--border));
+}
+
+.rbc-agenda-date-cell,
+.rbc-agenda-time-cell {
+    white-space: nowrap;
+    padding: 8px;
+}
+
+.rbc-agenda-event-cell {
+    padding: 8px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .rbc-off-range {
+        color: hsl(var(--muted-foreground));
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .rbc-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .rbc-toolbar-label {
+        text-align: center;
+        margin: 8px 0;
+    }
+    
+    .rbc-btn-group {
+        display: flex;
+        justify-content: center;
+    }
+}
